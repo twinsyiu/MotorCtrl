@@ -34,7 +34,7 @@ void move_motor(boolean motor, int motor_speed, int motor_direction)
 
 void init_white_line_snsr(boolean motor, int motor_speed, int motor_direction) 
 {
- 
+  // comment of white line sensor code
 }
 
 
