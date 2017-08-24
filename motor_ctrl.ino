@@ -27,6 +27,11 @@ void move_motor(boolean motor, int motor_speed, int motor_direction)
  
 }
 
+void init_sound_lvl_snsr(boolean motor, int motor_speed, int motor_direction) 
+{
+ 
+}
+
 void demoOne()
 {
   // this function will run the motors in both directions at a fixed speed
