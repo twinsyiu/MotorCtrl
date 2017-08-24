@@ -1,3 +1,4 @@
+/*
 #define IN1 4
 #define IN2 5
 #define IN3 7
@@ -6,7 +7,7 @@
 #define ENB 9
 #define MTR_L 0
 #define MTR_R 1
-
+*/
 // motor one
 int enA = 6;
 int in1 = 4;
