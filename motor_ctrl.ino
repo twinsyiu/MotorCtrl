@@ -32,6 +32,12 @@ void move_motor(boolean motor, int motor_speed, int motor_direction)
  
 }
 
+void init_white_line_snsr(boolean motor, int motor_speed, int motor_direction) 
+{
+ 
+}
+
+
 void demoOne()
 {
   // this function will run the motors in both directions at a fixed speed
