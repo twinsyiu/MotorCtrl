@@ -53,8 +53,41 @@ void demoOne()
   digitalWrite(IN4, LOW);
 }
 
+void demoTwo()
+{
+  // this function will run the motors across the range of possible speeds
+  // note that maximum speed is determined by the motor itself and the operating voltage
+  // the PWM values sent by analogWrite() are fractions of the maximum speed possible 
+  // by your hardware
+  // turn on motors
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);  
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH); 
+  // accelerate from zero to maximum speed
+  for (int i = 0; i < 256; i++)
+  {
+    analogWrite(ENA, i);
+    analogWrite(ENB, i);
+    delay(20);
+  } 
+  // decelerate from maximum speed to zero
+  for (int i = 255; i >= 0; --i)
+  {
+    analogWrite(ENA, i);
+    analogWrite(ENB, i);
+    delay(20);
+  } 
+  // now turn off motors
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);  
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);  
+}
 void loop() {
   // put your main code here, to run repeatedly:
   demoOne();
+  delay(1000);
+  demoTwo();
   delay(1000);
 }
